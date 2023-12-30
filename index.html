@@ -28,8 +28,23 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
     
+<script>
+var audio = new Audio("back.mp3");
 
-      <embed src="back.mp3" loop="true" autostart="true" width="0" height="0">
+audio.oncanplaythrough = function(){
+audio.play();
+}
+
+audio.loop = true;
+
+audio.onended = function(){
+audio.play();
+}
+
+</script>
+
+<button onclick="audio.play()">Play Music</button>
+
 
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
