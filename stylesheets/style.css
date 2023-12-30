@@ -20,12 +20,7 @@ https://stackoverflow.com/questions/3779534/how-do-i-disable-text-selection-with
 body{
     
   background-color:#A1FE4A;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select:none;
-    user-select:none;
-    -o-user-select:none;
-}
+ }
 
 .gameFullContent{
     width: 100%;
