@@ -18,9 +18,8 @@
 /* Solution for disabling text selection found on StackOverflow:
 https://stackoverflow.com/questions/3779534/how-do-i-disable-text-selection-with-css-or-javascript */
 body{
-     background-image: url("mm.jpeg");
-background-repeat: no-repeat;
-  background-size: 5000px 1000px;
+    
+  background-color:#A1FE4A;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select:none;
