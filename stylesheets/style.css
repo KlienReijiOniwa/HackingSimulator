@@ -105,16 +105,9 @@ body{
 /* Optimization for smaller screens */
 
     .bitcoin:hover{
-        width: 37%;
-        top: 33%;
-        transition: width 0.2s ease-in-out, top 0.2s ease-in-out;
-        cursor: pointer;
-    }
+      }
     .bitcoin:active{
-        width: 33%;
-        top: 37%;
-        transition: width 0.2s ease-in-out, top 0.2s ease-in-out;
-    }
+        }
 }
 
 /* Item list item */
