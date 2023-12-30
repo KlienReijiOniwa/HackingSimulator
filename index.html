@@ -26,9 +26,18 @@
     <meta name="og:type" content="website">
     <meta name="viewport" 
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<embed src="Back.mp3" loop="true" autostart="true" width="2" height="0">
-   
+  <audio id="audio" src="Back.mp3" type="mp3" loop=""/>
+</audio>
+<script>
+console.log("Player(Joined)[User:58384783]")
 
+window.onload = function() {
+    document.getElementById("audio").play();
+    console.log("object.Play(0937492).onload[Undifined]")
+    console.log("File:(music.mp3).play();[100]");
+    console.log("Music Playing...");
+    console.log("data load")
+}
 
 
 
