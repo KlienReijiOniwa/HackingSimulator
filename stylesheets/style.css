@@ -93,9 +93,6 @@ body{
 .bitcoin:hover{
 }
 .bitcoin:active{
-    width: 23%;
-    top: 27%;
-    transition: width 0.2s ease-in-out, top 0.2s ease-in-out;
 }
 
 /* Item list */
