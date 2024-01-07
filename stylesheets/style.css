@@ -87,11 +87,16 @@ body{
 }
 
 /* BITCOIN */
-.bitcoin{
-  }
-.bitcoin:hover{
+.btn-juicy.juice-big {
+	box-shadow: 10px 20px#aaa;
 }
-.bitcoin:active{
+.btn-juicy.juice-big:hover:active {
+	box-shadow: 2px 4px#444;
+	transform: translate(10px, 20px);
+}
+.btn-juicy.juice-big:hover {
+	box-shadow: 12px 24px#b4b4b4;
+	transform: translate(-2px, -4px);
 }
 
 /* Item list */
@@ -104,11 +109,18 @@ body{
 
 /* Optimization for smaller screens */
 
-    .bitcoin:hover{
-      }
-    .bitcoin:active{
-        }
+   .btn-juicy.juice-big {
+	box-shadow: 10px 20px#aaa;
 }
+.btn-juicy.juice-big:hover:active {
+	box-shadow: 2px 4px#444;
+	transform: translate(10px, 20px);
+}
+.btn-juicy.juice-big:hover {
+	box-shadow: 12px 24px#b4b4b4;
+	transform: translate(-2px, -4px);
+}
+
 
 /* Item list item */
 .purchaseItem{
