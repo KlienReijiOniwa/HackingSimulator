@@ -98,8 +98,8 @@ if(localStorage.getItem("bitcoins") === null){
   // Get the amount of Bitcoins and parse them to a float number
   bitcoins = parseFloat(localStorage.getItem("bitcoins"))
 
-  $(".bitcoinAmount").text("loading...")
-  $(".satoshiAmount").text("loading...")
+  $(".bitcoinAmount").text("Data Loading(please Wait)")
+  $(".satoshiAmount").text("Data Loading(please Wait)")
 
   let satoshis = bitcoins * 100000000;
 
@@ -154,10 +154,11 @@ Game.units = [
       "Octovigintillion",
       "Novemvigintillion",
       "Trigintillion",
-      "kenrich",
+      "Wastetillion",
       "Good Enough(E+)",
       "SolarWorld",
-      "TryHard"
+      "TryHard",
+      "Googol"
 ]
 
 
