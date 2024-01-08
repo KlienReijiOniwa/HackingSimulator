@@ -120,7 +120,7 @@ var Game = {}
 // Every constant variable is saved here
 Game.GameConst = {
   "priceMultiplier": 1.15,
-  "VERSION": "1"
+  "VERSION": "1.0 | (👨‍💻Update 1.0👨‍💻)"
 }
 
 Game.units = [
@@ -158,7 +158,32 @@ Game.units = [
       "Good Enough(E+)",
       "SolarWorld",
       "TryHard",
-      "Googol"
+      "Oltra",
+      "Wertillion",
+      "nistillion",
+      "GGAHevigintillion",
+      "Oniintillion",
+      "Lastigintillion",
+      "Cubeigintillion(E+)",
+      "GODDEST",
+      "Hungteversal",
+      "Hardcore",
+      "HardcoreTier1",
+      "HardcoreTier2",
+      "HardcoreTier3",
+      "HardcoreMax",
+      "Zacky",
+      "ZackyTier1",
+      "ZackyTier2",
+      "ZackyTier3",
+      "GoogolTier1",
+       "GoogolTier2",
+      "GoogolTier3",
+      "GoogolTier4",
+      "GoogolMax",
+      "GoogolPlexTier1",
+      "GoogolPlexTier2",
+      "Max"
 ]
 
 
