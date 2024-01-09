@@ -98,8 +98,8 @@ if(localStorage.getItem("bitcoins") === null){
   // Get the amount of Bitcoins and parse them to a float number
   bitcoins = parseFloat(localStorage.getItem("bitcoins"))
 
-  $(".bitcoinAmount").text("Data Loading(please Wait)")
-  $(".satoshiAmount").text("Data Loading(please Wait)")
+  $(".bitcoinAmount").text("Data Loading....")
+  $(".satoshiAmount").text("Unparsing Data")
 
   let satoshis = bitcoins * 100000000;
 
@@ -120,7 +120,7 @@ var Game = {}
 // Every constant variable is saved here
 Game.GameConst = {
   "priceMultiplier": 1.15,
-  "VERSION": "1.0 | (👨‍💻Update 1.0👨‍💻)"
+  "": "(👨‍💻Update 1.0👨‍💻)"
 }
 
 Game.units = [
