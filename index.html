@@ -13,7 +13,32 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 </head>
 <body onoffline="fun()">
-    
+ 
+
+
+
+
+
+
+
+     <script>
+function fun() {
+    alert(No Internet )
+    window.location.href = "index.html";
+}
+     </script>
+     
+</script>
+     <main>
+<div class="box">
+  <input id="tab1" type="radio" name="tabs" checked><i></i>
+  <ul>
+    <label for="tab1">Home</label>
+    <label for="tab2">Leaderboard</label>
+    <label for="tab3">Title's</label>
+  </ul>
+  <section id="content1">
+       
 
    <p>👾UPDATE 1.1👾 | <a href="leaderboard.html">Leaderboard</a> | <a href="title.html">Title Menu</a> | </p>
     <div class="gameFullContent">
@@ -157,20 +182,176 @@
                     <p class="itemHeadline">🃁Kings Of kings Hacker🃁</p>
                     <p class="itemPrice">750.000.000.000 Cash</p>
                 </li>
+</fieldset>
+  </section>
+
+</div>
 
 
+<div for="box">
+  <input id="tab2" type="radio" name="tabs"><i></i>
+  <ul>
+    <label for="tab1">Home</label>
+    <label for="tab2">Leaderboard</label>
+    <label for="tab3">Title's</label>
+  </ul>
+  <section id="content2">
+    Tab 2 Content
+  </section>
+
+</div>
 
 
+<div for="box">
+  <input id="tab3" type="radio" name="tabs"><i></i>
+  <ul>
+  <label for="tab1">Home</label>
+    <label for="tab2">Leaderboard</label>
+    <label for="tab3">Title's</label>
+  </ul>
+  <section id="content3">
+    Tab 3 Content
+  </section>
+
+</div>
+ 
 
 
+</main>
 
-
-     <script>
-function fun() {
-    alert(No Internet )
-    window.location.href = "index.html";
-}
 
          
-     </script>
-            </fieldset>
+     
+ <style>
+     html,body{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+main {
+  padding: 0;
+  margin: 0 auto;
+  background: #fff;
+}
+section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;
+}
+input {
+  display: none;
+}
+label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+}
+label:hover {
+  color: #888;
+  cursor: pointer;
+}
+input:checked + label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 2px solid orange;
+  border-bottom: 1px solid #fff;
+}
+#tab1 ~ ul,
+#tab2 ~ ul,
+#tab3 ~ ul,
+#tab4 ~ ul {
+  display: none;
+}
+#tab1:checked ~ #content1,
+#tab1:checked ~ ul,
+#tab2:checked ~ #content2,
+#tab2:checked ~ ul,
+#tab3:checked ~ #content3,
+#tab3:checked ~ ul,
+#tab4:checked ~ #content4,
+#tab4:checked ~ ul {
+  display: block;
+}
+#tab1:checked ~ #content1,
+#tab1:checked ~ ul label[for=tab1],
+#tab2:checked ~ #content2,
+#tab2:checked ~ ul label[for=tab2],
+#tab3:checked ~ #content3,
+#tab3:checked ~ ul label[for=tab3],
+#tab4:checked ~ #content4,
+#tab4:checked ~ ul label[for=tab4] {
+    color: red
+}
+i:before, 
+i:after {
+  transition: all 0.25s ease-in-out;
+}
+i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 16px;
+  right: 10px;
+}
+i:before, 
+i:after {
+  content: "";
+  position: absolute;
+  background-color: #ff6873;
+  width: 3px;
+  height: 9px;
+}
+i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+input:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+input:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+@media screen and (max-width: 650px) {
+    #tab1 ~ ul,
+    #tab1 ~ ul label[for=tab1],
+    #tab2 ~ ul,
+    #tab2 ~ ul label[for=tab2],
+    #tab3 ~ ul,
+    #tab3 ~ ul label[for=tab3],
+    #tab4 ~ ul,
+    #tab4 ~ ul label[for=tab4] {
+        display: inline-block;
+    }
+    #tab1:not(:checked) ~ ul label[for=tab2],
+    #tab1:not(:checked) ~ ul label[for=tab3],
+    #tab1:not(:checked) ~ ul label[for=tab4],
+    #tab2:not(:checked) ~ ul label[for=tab1],
+    #tab2:not(:checked) ~ ul label[for=tab3],
+    #tab2:not(:checked) ~ ul label[for=tab4],
+    #tab3:not(:checked) ~ ul label[for=tab1],
+    #tab3:not(:checked) ~ ul label[for=tab2],
+    #tab3:not(:checked) ~ ul label[for=tab4],
+    #tab4:not(:checked) ~ ul label[for=tab1],
+    #tab4:not(:checked) ~ ul label[for=tab2],
+    #tab4:not(:checked) ~ ul label[for=tab3],
+    #tab1:checked ~ ul label[for=tab2],
+    #tab1:checked ~ ul label[for=tab3],
+    #tab1:checked ~ ul label[for=tab4],
+    #tab2:checked ~ ul label[for=tab1],
+    #tab2:checked ~ ul label[for=tab3],
+    #tab2:checked ~ ul label[for=tab4],
+    #tab3:checked ~ ul label[for=tab1],
+    #tab3:checked ~ ul label[for=tab2],
+    #tab3:checked ~ ul label[for=tab4],
+    #tab4:checked ~ ul label[for=tab1],
+    #tab4:checked ~ ul label[for=tab2],
+    #tab4:checked ~ ul label[for=tab3]{
+        display: none
+    }
+}
+ </style>           
