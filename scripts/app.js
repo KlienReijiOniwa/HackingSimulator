@@ -101,7 +101,7 @@ if(localStorage.getItem("bitcoins") === null){
   $(".bitcoinAmount").text("Data Loading....")
   $(".satoshiAmount").text("Unparsing Data")
 
-  let satoshis = bitcoins * 100000000;
+  let satoshis = bitcoins * 100000000000000000000000000000000000000000000;
 
 }
 
