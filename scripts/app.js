@@ -75,7 +75,28 @@ var items = [
   {
     "name": "item_blackHolePoweredMiner",
     "price": "750000000000"
+  },
+  {
+    "name": "item_DemonicError",
+    "price": "100000000000000"
+  },
+  {
+    "name": "item_404Error",
+    "price": "500000000000000000"
+  },
+  {
+    "name": "item_404Angel",
+    "price": "404000000000000000000"
+  },
+  {
+    "name": "item_Expert404DemonHacker",
+    "price": "444444444444444444444444444"
+  },
+  {
+    "name": "item_OniwaPenutRage",
+    "price": "999000000000000000000000000000000"
   }
+  
 ]
 
 // Rate is null (at the beginning)
