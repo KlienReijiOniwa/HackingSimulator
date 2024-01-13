@@ -97,7 +97,7 @@ var items = [
     "price": "999000000000000000000000000000000"
   },
   {
-    "name": "item_Kevin Mitnick",
+    "name": "item_KevinMitnick",
     "price": "100000000000000000000000000000000000000000000000000000"
   }
   
