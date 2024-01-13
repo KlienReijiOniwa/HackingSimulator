@@ -206,7 +206,7 @@ var Game = {}
 // Every constant variable is saved here
 Game.GameConst = {
   "priceMultiplier": 1.15,
-  "VERSION": "1.4.0"
+  "VERSION": "1"
 }
 
 Game.units = [
