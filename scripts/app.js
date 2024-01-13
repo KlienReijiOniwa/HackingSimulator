@@ -95,6 +95,10 @@ var items = [
   {
     "name": "item_OniwaPenutRage",
     "price": "999000000000000000000000000000000"
+  },
+  {
+    "name": "item_Kevin Mitnick",
+    "price": "999000000000000000000000000000000"
   }
   
 ]
