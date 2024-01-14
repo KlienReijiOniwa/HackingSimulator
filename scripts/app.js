@@ -157,7 +157,6 @@ var items = [
     "price": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
   }
 ]
-
 // Rate is null (at the beginning)
 var bSec = null;
 
@@ -178,8 +177,8 @@ if(localStorage.getItem("bitcoins") === null){
   // Get the amount of Bitcoins and parse them to a float number
   bitcoins = parseFloat(localStorage.getItem("bitcoins"))
 
-  $(".bitcoinAmount").text("Data Loading....")
-  $(".satoshiAmount").text("Unparsing Data")
+  $(".bitcoinAmount").text("loading...")
+  $(".satoshiAmount").text("loading...")
 
   let satoshis = bitcoins * 100000000;
 
@@ -200,7 +199,7 @@ var Game = {}
 // Every constant variable is saved here
 Game.GameConst = {
   "priceMultiplier": 1.15,
-  "VERSION": "1"
+  "VERSION": "1.4.0"
 }
 
 Game.units = [
@@ -233,38 +232,7 @@ Game.units = [
       "Septvigintillion",
       "Octovigintillion",
       "Novemvigintillion",
-      "Trigintillion",
-      "Wastetillion",
-      "Good Enough(E+)",
-      "SolarWorld",
-      "TryHard",
-      "Oltra",
-      "Wertillion",
-      "nistillion",
-      "GGAHevigintillion",
-      "Oniintillion",
-      "Lastigintillion",
-      "Cubeigintillion(E+)",
-      "GODDEST",
-      "Hungteversal",
-      "Hardcore",
-      "Hardcore(Tier1)",
-      "Hardcore(Tier2)",
-      "Hardcore(Tier3)",
-      "Hardcore(Max)",
-      "Zacky",
-      "Zacky(Tier1)",
-      "Zacky(Tier2)",
-      "Zacky(Tier3)",
-      "Googol",
-      "Googol(Tier1)",
-       "Googol(Tier2)",
-      "Googol(Tier3)",
-      "Googol(Tier4)",
-      "Googol(Max)",
-      "GoogolPlex(Tier1)",
-      "GoogolPlex(Tier2)",
-      "Max"
+      "Trigintillion"
 ]
 
 
@@ -422,7 +390,7 @@ Game.setNewPrice = function()
         var calculation = (parseFloat(items[i].price) * Math.pow(multiplier, parseInt(itemAmount))).toFixed(8)
 
         // Showing the actual price
-        $element.children()[2].textContent = calculation + " Cash"
+        $element.children()[2].textContent = calculation + " Bitcoins"
 
         // Set the data-price attribute with the new price
         $element.attr("data-price", calculation.toString())
