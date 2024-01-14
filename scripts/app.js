@@ -237,7 +237,41 @@ Game.units = [
       "Septvigintillion",
       "Octovigintillion",
       "Novemvigintillion",
-      "Trigintillion"
+      "Trigintillion",
+        "Septillion",
+      "Trigintillion",
+      "Wastetillion",
+      "Good Enough(E+)",
+      "SolarWorld",
+      "TryHard",
+      "Oltra",
+      "Wertillion",
+      "nistillion",
+      "GGAHevigintillion",
+      "Oniintillion",
+      "Lastigintillion",
+      "Cubeigintillion(E+)",
+      "GODDEST",
+      "Hungteversal",
+      "Hardcore",
+      "Hardcore(Tier1)",
+      "Hardcore(Tier2)",
+      "Hardcore(Tier3)",
+      "Hardcore(Max)",
+      "Zacky",
+      "Zacky(Tier1)",
+      "Zacky(Tier2)",
+      "Zacky(Tier3)",
+      "Googol",
+      "Googol(Tier1)",
+       "Googol(Tier2)",
+      "Googol(Tier3)",
+      "Googol(Tier4)",
+      "Googol(Max)",
+      "GoogolPlex(Tier1)",
+      "GoogolPlex(Tier2)",
+      "Max"
+
 ]
 
 
@@ -385,7 +419,7 @@ Game.setNewPrice = function()
       var $element = $("#" + items[i].name)
       var itemAmount = localStorage.getItem(items[i].name)
 
-      $element.children()[0].textContent = itemAmount
+      $element.children()[0].textContent = TextContent
 
       // Only calculate if there is more than 0 items
       if(itemAmount > 0) {
