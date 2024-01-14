@@ -308,7 +308,7 @@ Game.setBitcoinPerSecondRateAtBeginning = function () {
       var itemAmount = localStorage.getItem(items[i].name)
 
       // Writing the amount on the page at the item´s element
-      $element.children()[0].textContent = itemAmount
+      
 
       // Only calculate the new price if there is more than 0 items.
       // If there are not enough items, it will just continue, and if there are,
