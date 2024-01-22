@@ -1,0 +1,242 @@
+<video hidden="" id="myVideo" width="320" height="176" controls="controls">
+  <source src="https://media.discordapp.net/attachments/1135978402252333203/1198297312741556514/VID_20240120235654.mp4?ex=65be6456&is=65abef56&hm=12b98941cf09723742f592e7819017cf6b54c9e280d5503a63aaa0d867432573&" type="video/mp4">
+  
+</video>
+<center>
+  <div id="container">
+
+ 
+    <br>
+<div id="enemyPokemon">
+    <img id="enemyPokemonImage"src="" alt="" width="300" height="300" />
+        <br>
+
+      <progress id="enemyHealthBar" max="750" value="750"> </progress>
+      <p>
+        <div id="enemyHealthNumber">750</div>
+      </p>
+      <h1 id="enemyName"></h1>
+
+    </div>
+
+
+
+
+
+
+    <div id="yourPokemon">
+       <img id="yourPokemonImage"  src="" alt="" width="300" height="300" />
+     <br>
+
+      <progress id="playerHealthBar" max="750" value="750"> </progress>
+      <p>
+        <div id="playerHealthNumber">750</div>
+      </p>
+     
+       <h1 id="playerName"></h1>
+      <button class="cooldown" onclick="attack();">(Hack)</button>
+      <button id="btn" onclick="special();">SS(Hack)</button>
+    </div>
+<!-- 
+http://vignette4.wikia.nocookie.net/sonicpokemon/images/e/ee/001_bulbasaur_by_pklucario.png/revision/latest?cb=20140520161302" -->
+    
+    
+</center>
+<script>
+  //player setup, add all the elements for the player here
+var playerLevel = 1;
+var playerHealth = "100000";
+var playerType = "Fire";
+var regularAttack = "400";
+var specialAttack = "999";
+var playerName= "Your Hackers";
+var battle= new Audio("http://66.90.91.26/ost/pokemon-gameboy-sound-collection/aipycrsoym/101-opening.mp3")
+document.getElementById("playerHealthBar").value = playerHealth;
+document.getElementById("playerHealthNumber").innerHTML = playerHealth;
+document.getElementById("playerName").innerHTML = playerName;
+document.getElementById("yourPokemonImage").src = "pfp.jpeg";
+battle.play()
+
+//enemy Level 1 setup
+var enemyHealth = "100000";
+var enemyType = "Grass";
+var enemyAttack = "400";
+var enemyName = "Enemy's Defense";
+document.getElementById("enemyName").innerHTML = enemyName;
+document.getElementById("enemyHealthBar").value = enemyHealth;
+document.getElementById("enemyHealthBar").max = enemyHealth;
+document.getElementById("enemyHealthNumber").innerHTML = enemyHealth;
+document.getElementById("enemyPokemonImage").src = "pfp.jpeg";
+
+// Function whenever the attack button is pressed, called in HTML
+function attack() {
+  enemyHealth = enemyHealth - regularAttack;
+  document.getElementById("enemyHealthBar").value = enemyHealth;
+  document.getElementById("enemyHealthNumber").innerHTML = enemyHealth;
+  enemyMove();
+  gameChecker();
+}
+// Function whenever the special button is pressed, called in HTML
+function special() {
+  typeChecker();
+  enemyHealth = enemyHealth - specialAttack;
+  document.getElementById("enemyHealthBar").value = enemyHealth;
+  document.getElementById("enemyHealthNumber").innerHTML = enemyHealth;
+  enemyMove();
+  gameChecker();
+  var btn = document.getElementById('btn');
+        btn.disabled = true;
+        btn.innerText = 'SS 0/1'
+}
+
+//Enemy fights back with the attack power it was given on the setup or when the level changes
+function enemyMove() {
+  playerHealth = playerHealth - enemyAttack;
+  document.getElementById("playerHealthBar").value = playerHealth;
+  document.getElementById("playerHealthNumber").innerHTML = playerHealth;
+  gameChecker();
+}
+
+//Make sure special moves are used correctly, by modifying their value according to the type of Pokemon the enemy is
+function typeChecker() {
+  //User is Fire
+  if (playerType == "Fire" && enemyType == "Grass") {
+    specialAttack = specialAttack * 2;
+  }
+  if (playerType == "Fire" && enemyType == "Lightning") {
+    specialAttack = specialAttack / 2;
+  }
+  if (playerType == "Fire" && enemyType == "Water") {
+    specialAttack = specialAttack / 2;
+  }
+ if (playerType == "Fire" && enemyType == "Ice") {
+    specialAttack = specialAttack * 2;
+  }
+  if (playerType == "Fire" && enemyType == "Dark") {
+    specialAttack = specialAttack / 2;
+  }
+  if (playerType == "Fire" && enemyType == "Normal") {
+    specialAttack = specialAttack / 2;
+  }
+   if (playerType == "Fire" && enemyType == "Ghost") {
+    specialAttack = specialAttack * 1;
+   }
+  //User is Water
+  if (playerType == "Water" && enemyType == "Grass") {
+    specialAttack = specialAttack / 2;
+  }
+  if (playerType == "Water" && enemyType == "Lightning") {
+    specialAttack = specialAttack * 0.75;
+  }
+  if (playerType == "Water" && enemyType == "Fire") {
+    specialAttack = specialAttack * 2;
+  }
+     
+  //User is Grass
+  if (playerType == "Grass" && enemyType == "Fire") {
+    specialAttack = specialAttack / 2;
+  }
+  if (playerType == "Grass" && enemyType == "Lightning") {
+    specialAttack = specialAttack * 1;
+  }
+  if (playerType == "Grass" && enemyType == "Water") {
+    specialAttack = specialAttack * 2;
+  }
+}
+
+function gameChecker() {
+  if (playerHealth < 1) {
+    alert("Deafeted:-50 Victims | -100000 Cash");
+    document.location='nicola.html'
+  
+    //reset the game code goes here
+  }
+
+  if (enemyHealth < 1) {
+    playerLevel++;
+    alert("Win:+1000 Cash | +10 Victims")
+    document.location='nicola.html'
+  
+    //Change Level
+  }
+}
+
+let vid = document.getElementById("myVideo");
+ vid.autoplay = true;
+  vid.load();
+  
+  $('button.cooldown').click(function(){
+  var btn = $(this);
+  btn.prop('disabled', true);
+  setTimeout(function(){
+    btn.prop('disabled', false);
+  },15000);
+})
+</script>
+<style>
+  body {
+     background-image: url('grass.png');
+    color: white;
+    text-shadow: 2px 2px #000;
+    padding: 1px;
+    
+  }
+  button {
+    padding: 15px;
+  }
+  
+  $buttonBaseColor: #336699;
+$disableDuration: 15s;
+button.cooldown{
+  background: $buttonBaseColor;
+  min-height: 48px;
+  min-width: 144px;
+  position: relative;
+  margin: 5px;
+  border-radius: 5px;
+  border: 0;
+  color: #fff;
+  padding: 0 15px;
+  font-size: 16px;
+  outline: none;
+  overflow: hidden;
+  cursor: pointer;
+  &:active, &:focus{
+    outline: none;
+  }
+  &:disabled{
+    background: darken($buttonBaseColor, 10%);
+    color: darken(#fff, 15%);
+    cursor: default;
+    box-shadow: inset 3px 3px 10px 0px rgba(0,0,0,0.2);
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      height: 5px;
+      background: darken($buttonBaseColor, 20%);
+      animation: cooldown $disableDuration linear;
+    }
+  }
+}
+
+@keyframes cooldown {
+   0% { width: 100%; }
+   100% { width: 0; }
+}
+
+
+
+
+
+/* layout stuff */
+section{
+  text-align: center;
+  margin-top: 100px;
+  color: #333;
+}
+p{font-size: 12px;}
+
+</style>
