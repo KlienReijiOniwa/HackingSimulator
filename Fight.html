@@ -4,6 +4,11 @@
   <source src="https://media.discordapp.net/attachments/1135978402252333203/1198297312741556514/VID_20240120235654.mp4?ex=65be6456&is=65abef56&hm=12b98941cf09723742f592e7819017cf6b54c9e280d5503a63aaa0d867432573&" type="video/mp4">
   
 </video>
+<script>
+let vid = document.getElementById("myVideo");
+ vid.autoplay = true;
+  vid.load();
+</script>
 <center>
   <div id="container">
 
@@ -149,7 +154,7 @@ function typeChecker() {
 function gameChecker() {
   if (playerHealth < 1) {
     alert("Deafeted:-50 Victims | -100000 Cash");
-    document.location='nicola.html'
+    document.location='game.html'
   
     //reset the game code goes here
   }
@@ -157,15 +162,12 @@ function gameChecker() {
   if (enemyHealth < 1) {
     playerLevel++;
     alert("Win:+1000 Cash | +10 Victims")
-    document.location='nicola.html'
+    document.location='game.html'
   
     //Change Level
   }
 }
 
-let vid = document.getElementById("myVideo");
- vid.autoplay = true;
-  vid.load();
   
   $('button.cooldown').click(function(){
   var btn = $(this);
