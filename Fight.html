@@ -82,6 +82,11 @@ function attack() {
   document.getElementById("enemyHealthNumber").innerHTML = enemyHealth;
   enemyMove();
   gameChecker();
+
+var snd = new Audio('bell.wav')//wav is also supported
+     snd.play()//plays the sound
+
+ 
 }
 // Function whenever the special button is pressed, called in HTML
 function special() {
@@ -94,6 +99,11 @@ function special() {
   var btn = document.getElementById('btn');
         btn.disabled = true;
         btn.innerText = 'SS 0/1'
+ 
+var snd = new Audio('bomb.wav')//wav is also supported
+     snd.play()//plays the sound
+
+ 
 }
 
 //Enemy fights back with the attack power it was given on the setup or when the level changes
