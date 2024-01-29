@@ -21,7 +21,14 @@
       <h3>Reward:</h3>
       <p>Randomized</p>
 <h1>[(Hacker is on Risk)]</1>
-  <button class="cooldown" onclick="attack();">(Hack)</button>
+ 
+<div class="container">
+    <div class="content">
+        <button onclick="attack();" class="btn">Hack</button>
+    </div>
+</div>
+
+  
   <h1>------Defense(T3 Max)------</h1>
     </div>
 
@@ -40,7 +47,7 @@
       </p>
      
        <h1 id="playerName" hidden=""></h1>
-      
+   
       <button id="btn" onclick="special();" hidden="">SS(Hack)</button>
     </div>
 <!-- 
@@ -248,4 +255,247 @@ section{
 }
 p{font-size: 12px;}
 
+.container {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-15px);
+}
+.content {
+  position: relative;
+  width: 200px;
+  margin: auto;
+  height: 66px;
+}
+.logo {
+  width: 90px;
+}
+.content .btn {
+  background-color: rgb(181, 0, 160);
+
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  width: 200px;
+  height: 66px;
+  font-size: 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  -webkit-box-shadow: 6px 8px 10px 0px rgb(181, 0, 160);
+  box-shadow: 6px 5px 20px 0px rgb(125, 46, 115);
+  transition: all 0.1s linear;
+}
+
+.content .btn:hover {
+  background-color: #b101c1;
+}
+.content .btn:active {
+  transform: scale(0.8);
+}
+.perticles-circle {
+  position: absolute;
+  background-color: #b101c1;
+  width: 90px;
+  height: 90px;
+  top: 5%;
+  left: 25%;
+  z-index: -1;
+  margin-left: -10px;
+  border-radius: 50%;
+  transform: scale(0);
+}
+.content .perticles-circle:nth-of-type(odd) {
+  border: solid 2px #b101c1;
+  background-color: transparent;
+}
+.active .perticles-circle:nth-of-type(1) {
+  animation: particles-1 1.5s 0.025s;
+}
+@keyframes particles-1 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    left: 247px;
+    top: 74px;
+  }
+}
+.active .perticles-circle:nth-of-type(2) {
+  animation: particles-2 1.5s 0.005s;
+}
+@keyframes particles-2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    left: -4px;
+    top: 153px;
+  }
+}
+
+.active .perticles-circle:nth-of-type(3) {
+  animation: particles-3 1.5s 0.075s;
+}
+@keyframes particles-3 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    left: 142px;
+    top: 226px;
+  }
+}
+
+.active .perticles-circle:nth-of-type(4) {
+  animation: particles-4 1.5s 0.01s;
+}
+@keyframes particles-4 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    left: 193px;
+    top: -184px;
+  }
+}
+.active .perticles-circle:nth-of-type(5) {
+  animation: particles-5 1.5s 0.125s;
+}
+@keyframes particles-5 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    left: 179px;
+    top: 67px;
+  }
+}
+
+.active .perticles-circle:nth-of-type(6) {
+  animation: particles-6 1.5s 0.15s;
+}
+@keyframes particles-6 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    left: 120px;
+    top: 7px;
+  }
+}
+.active .perticles-circle:nth-of-type(7) {
+  animation: particles-7 1.5s 0.175s;
+}
+@keyframes particles-7 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    left: 146px;
+    top: -71px;
+  }
+}
+.active .perticles-circle:nth-of-type(8) {
+  animation: particles-8 1.5s 0.2s;
+}
+@keyframes particles-8 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    left: 239px;
+    top: 223px;
+  }
+}
+
+.active .perticles-circle:nth-of-type(9) {
+  animation: particles-9 1.5s 0.225s;
+}
+@keyframes particles-9 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    left: 187px;
+    top: 62px;
+  }
+}
+
+.active .perticles-circle:nth-of-type(10) {
+  animation: particles-10 1.5s 0.25s;
+}
+@keyframes particles-10 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    left: 198px;
+    top: 75px;
+  }
+}
+.active .perticles-circle:nth-of-type(11) {
+  animation: particles-11 1.5s 0.275s;
+}
+@keyframes particles-11 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    left: 233px;
+    top: -202px;
+  }
+}
+.active .perticles-circle:nth-of-type(12) {
+  animation: particles-12 1.5s 0.75s;
+}
+@keyframes particles-12 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    left: -5px;
+    top: -172px;
+  }
+}
+
+  
 </style>
+
+<script>
+  let bouton = document.querySelector('.btn');
+let content = document.querySelector('.content');
+let particule = 13;
+var part;
+var compt = 0;
+
+bouton.addEventListener('click',()=>{
+    if(compt <13)
+    {
+        for(let i=0;i<particule;i++)
+        {
+           part =  document.createElement('span');
+           part.classList.add('perticles-circle');
+           content.appendChild(part);
+           compt++
+        }
+    }
+    else if(compt >13)
+    {
+        compt = 0 
+    }
+    content.classList.add('active')
+        setTimeout(() => {
+            content.classList.remove('active')
+        }, 1800);
+       
+       
+   
+   
+    
+})
+
+</script>
+
